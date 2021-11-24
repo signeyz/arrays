@@ -1,11 +1,32 @@
 const myArray = [1, 2, 3, 4];
 
+// adds to the end of  the array
 myArray.push(6, 7, 8);
+
+// adds to the start of the array
 myArray.unshift(-2, -1, 0);
+
+// removes from the end of the array
 myArray.pop();
+
+// removes from the start of the array
 myArray.shift();
 
 console.log(myArray);
+
+// To create a new array or filter an specific item in the array
+// Concat does not modify array
+const letters = ['a', 'b', 'c', 'd'];
+
+const i = 3;
+
+const filterItem = letters
+  .slice(0, i - 2)
+  .concat(letters.slice(i, letters.length));
+
+console.log(filterItem);
+
+// const filteredItems = items.slice(0, i-1).concat(items.slice(i, items.length))
 
 // This is how you can add to you array without mutating it like I did above with the methods. AKA the Matrix - an array inside an array. I can also add an array in an array that is in an array
 const whateves = [['cat', 'dog'], ['car', 'home'], [['Joker', 'Batman']]];
