@@ -13,9 +13,10 @@ myArray.pop();
 myArray.shift();
 
 console.log(myArray);
+console.log(myArray.length);
 
-// To create a new array or filter an specific item in the array
-// Concat does not modify array
+// To create a new array or filter out a specific item in the array
+// Concat does not modify array and it combines two arrays
 const letters = ['a', 'b', 'c', 'd'];
 
 const i = 3;
@@ -25,8 +26,6 @@ const filterItem = letters
   .concat(letters.slice(i, letters.length));
 
 console.log(filterItem);
-
-// const filteredItems = items.slice(0, i-1).concat(items.slice(i, items.length))
 
 // This is how you can add to you array without mutating it like I did above with the methods. AKA the Matrix - an array inside an array. I can also add an array in an array that is in an array
 const whateves = [['cat', 'dog'], ['car', 'home'], [['Joker', 'Batman']]];
@@ -68,13 +67,13 @@ console.log(checkIt3.constructor === String);
 // Giving an array variables and assigning it to the name of the array
 const decon = [1, 2, 3, 4, 5, 6];
 
-// const [first, second, third, fouth, fifth, sixth] = decon;
+const [first, second, third, fouth, fifth, sixth] = decon;
 
-console.log(decon);
+console.log(first);
 
 // I can also use the spread operator to add the rest of the numbers, which is creating an array from an existing array
 
-const [first, second, ...rest] = decon;
+// const [first, second, ...rest] = decon;
 
 const stringSubstitution = 'Hey';
 
@@ -86,3 +85,9 @@ const string2 = 'there';
 const twoStrings = string1 + ' ' + string2;
 
 console.log(twoStrings);
+
+const x = [10, 20, 30];
+const y = [40, 50, 60];
+
+const both = [...x, ...y];
+console.log(both);
